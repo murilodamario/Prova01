@@ -10,8 +10,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  TextEditingController firstNumber = TextEditingController();
-  TextEditingController secondNumber = TextEditingController();
+  TextEditingController n1 = TextEditingController();
+  TextEditingController n2 = TextEditingController();
   double result = 0;
 
   @override
@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
                             labelStyle: TextStyle(fontSize: 14),
                             labelText: 'Digite o primeiro número',
                           ),
-                          controller: firstNumber,
+                          controller: n1,
                           textAlign: TextAlign.center,
                         )),
                         Padding(
@@ -54,54 +54,54 @@ class _HomeState extends State<Home> {
                             labelStyle: TextStyle(fontSize: 14),
                             labelText: 'Digite o segundo número',
                           ),
-                          controller: secondNumber,
+                          controller: n2,
                           textAlign: TextAlign.center,
                         )),
                         const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+                          padding: EdgeInsets.symmetric(horizontal: 0, vertical: 12),
                           child:(
                             Text("Selecione a operação",
                             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)
                           ))
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 20), 
+                          padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 18), 
                           child: Row(                          
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                             OutlinedButton(
-                              child: const Text('+', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.deepPurple)),
+                              child: const Text('+', style: TextStyle(fontSize: 20,  color: Colors.deepPurple, fontWeight: FontWeight.bold)),
                               onPressed: () {
                                 setState(() {
-                                  result = double.parse(firstNumber.text) +
-                                      double.parse(secondNumber.text);
+                                  result = double.parse(n1.text) +
+                                      double.parse(n2.text);
                                 });
                               },
                             ),
                             OutlinedButton(
-                              child: const Text('-', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.deepPurple)),
+                              child: const Text('-', style: TextStyle(fontSize: 20, color: Colors.deepPurple, fontWeight: FontWeight.bold)),
                               onPressed: () {
                                 setState(() {
-                                  result = double.parse(firstNumber.text) -
-                                      double.parse(secondNumber.text);
+                                  result = double.parse(n1.text) -
+                                      double.parse(n2.text);
                                 });
                               },
                             ),
                             OutlinedButton(
-                              child: const Text('×', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.deepPurple)),
+                              child: const Text('×', style: TextStyle(fontSize: 20, color: Colors.deepPurple, fontWeight: FontWeight.bold)),
                               onPressed: () {
                                 setState(() {
-                                  result = double.parse(firstNumber.text) *
-                                      double.parse(secondNumber.text);
+                                  result = double.parse(n1.text) *
+                                      double.parse(n2.text);
                                 });
                               },
                             ),
                             OutlinedButton(
-                              child: const Text('÷', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.deepPurple)),
+                              child: const Text('÷', style: TextStyle(fontSize: 20, color: Colors.deepPurple, fontWeight: FontWeight.bold)),
                               onPressed: () {
                                 setState(() {
-                                  result = double.parse(firstNumber.text) /
-                                      double.parse(secondNumber.text);
+                                  result = double.parse(n1.text) /
+                                      double.parse(n2.text);
                                 });
                               },
                             )
@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
                             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)))
                         ),
                           Text(result.toString(),
-                          style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold))
+                          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold))
                       ]),
             )
           )
