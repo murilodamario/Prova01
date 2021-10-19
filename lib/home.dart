@@ -70,7 +70,7 @@ class _HomeState extends State<Home> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                             OutlinedButton(
-                              child: const Text('+', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white, backgroundColor: Colors.blueGrey)),
+                              child: const Text('+', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.deepPurple)),
                               onPressed: () {
                                 setState(() {
                                   result = double.parse(firstNumber.text) +
@@ -79,7 +79,7 @@ class _HomeState extends State<Home> {
                               },
                             ),
                             OutlinedButton(
-                              child: const Text('-', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white, backgroundColor: Colors.blueGrey)),
+                              child: const Text('-', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.deepPurple)),
                               onPressed: () {
                                 setState(() {
                                   result = double.parse(firstNumber.text) -
@@ -88,7 +88,7 @@ class _HomeState extends State<Home> {
                               },
                             ),
                             OutlinedButton(
-                              child: const Text('×', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white, backgroundColor: Colors.blueGrey)),
+                              child: const Text('×', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.deepPurple)),
                               onPressed: () {
                                 setState(() {
                                   result = double.parse(firstNumber.text) *
@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
                               },
                             ),
                             OutlinedButton(
-                              child: const Text('÷', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white, backgroundColor: Colors.blueGrey)),
+                              child: const Text('÷', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.deepPurple)),
                               onPressed: () {
                                 setState(() {
                                   result = double.parse(firstNumber.text) /
